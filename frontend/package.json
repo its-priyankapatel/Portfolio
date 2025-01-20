@@ -37,8 +37,6 @@
   },
   "devDependencies": {
     "tailwindcss": "^3.4.17",
-    "tailwindcss-animate": "^1.0.7",
-    "tailwindcss-motion": "^1.0.1",
     "web-vitals": "^4.2.4"
   }
 }
