@@ -1,3 +1,5 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {font-family: "heading"; src:url("./fonts/Mont-HeavyDEMO.otf")format("opentype")}
+@font-face {font-family: "para"; src:url("./fonts/Gontserrat-Light.ttf")format("truetype")}

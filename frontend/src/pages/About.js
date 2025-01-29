@@ -1,5 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
+import priyanka from "../images/pinku_patel.jpg";
+
 const About = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false }); // Trigger every time it enters the viewport
@@ -14,49 +16,38 @@ const About = () => {
   }, [isInView, mainControl]);
   return (
     <>
-      <div className="md:px-24 px-3 md:mt-20 mt-6 h-screen flex flex-col justify-center border-b-[0.9px] border-double border-yellow-400">
-        <div className=" text-yellow-400 md:text-3xl text-2xl  font-redhat font-bold text-center pt-6">
-          About me
-        </div>
-
-        <motion.div
-          className="flex md:mt-10 mt-6 md:h-40 h-80 items-center rounded-lg bg-white bg-opacity-10 "
+      <div className=" h-screen w-full flex md:flex-row flex-col items-center md:justify-center justify-start md:pt-24 pt-16 md:gap-36 gap-5">
+        <div
+          className=" md:h-80  w-full md:w-1/2 flex justify-center bg-sky-400 "
           ref={ref}
           variants={{
-            hidden: { opacity: 0, x: -1000 },
+            hidden: { opacity: 0, x: 100 },
             visible: { opacity: 1, x: 0 },
           }}
           initial="hidden"
           animate={mainControl}
-          transition={{ duration: 2, delay: 0.25 }}
+          transition={{ duration: 1, delay: 0.25 }}
         >
-          <p className=" text-white md:text-center text-start font-sans md:text-xl text-md tracking-wide px-6">
+          <p className="font-heading text-white text-3xl flex flex-col gap-2">
+            <span>A</span>
+            <span>B</span>
+            <span>O</span>
+            <span>U</span>
+            <span>T</span>
+          </p>
+          <p className=" md:text-base text-sm font-redhat text-white text-center md:text-left">
             I am a passionate and motivated individual with a strong foundation
-            in programming, starting with C and C++, which have sharpened my
+            in programming, starting with C and C++, which enhanced my
             problem-solving skills and understanding of core concepts. My
-            curiosity in web development led me to learn HTML and CSS, allowing
-            me to design responsive and visually appealing websites.
+            curiosity for web development led me to learn HTML and CSS, enabling
+            me to design responsive and visually appealing websites. I enjoy
+            exploring the MERN stack, leveraging React.js for interactive
+            interfaces and Node.js for back-end development. Continuously driven
+            by a love for learning new technologies, I am dedicated to building
+            projects that address real-world challenges and look forward to
+            connecting to innovate together🚀
           </p>
-        </motion.div>
-        <motion.div
-          className="flex md:mt-10 mt-6 md:h-40 h-80 items-center rounded-lg bg-white bg-opacity-10"
-          ref={ref}
-          variants={{
-            hidden: { opacity: 0, x: 1000 },
-            visible: { opacity: 1, x: 0 },
-          }}
-          initial="hidden"
-          animate={mainControl}
-          transition={{ duration: 2, delay: 0.25 }}
-        >
-          <p className=" text-white md:text-center text-start font-sans md:text-xl text-md tracking-wide px-6 ">
-            Beyond coding, I enjoy exploring the MERN stack, where I leverage
-            React.js for interactive interfaces and Node.js for back-end
-            development. I thrive on learning new technologies and building
-            projects that solve real-world challenges. Let’s connect to innovate
-            together!
-          </p>
-        </motion.div>
+        </div>
       </div>
     </>
   );

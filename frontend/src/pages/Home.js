@@ -1,71 +1,63 @@
 import React from "react";
 import priyanka from "../images/pinku_yellow.jpg";
 import { motion } from "framer-motion";
+import priyanka2 from "../images/Priyanka.png";
 
 const Home = () => {
-  const openResume = () => {
-    window.open(
-      "https://www.dropbox.com/scl/fi/j73xb3eqp7737lhtfgkb7/Priyanka-Patel-Resume.pdf?rlkey=b7sj5nmbe5hd97kivbkh7806l&st=rptsh149&dl=0",
-      "_blank"
-    );
+  const pdfURL = "/pdf/Priyanka_Patel_Resume.pdf";
+  const openResume = (e) => {
+    e.preventDefault();
+    window.open(pdfURL, "_blank", "noopener,nonreferrer");
   };
   return (
     <>
-      <div className="h-screen w-full ">
-        <div className="md:px-24 px-3 pt-6 md:pt-10 h-full  ">
-          <div className=" h-auto md:h-96 flex flex-col-reverse md:flex-row md:justify-between items-center mt-2 md:mt-20 ">
-            <div className=" w-64 md:w-1/2  text-center md:text-left ">
-              <motion.p
-                className="font-roboto text-3xl md:text-5xl mt-6 md:mt-4 text-yellow-400 font-semibold"
-                initial={{ opacity: 0, y: -30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1 }}
-              >
-                HELLO, I AM PRIYANKA PATEL
-              </motion.p>
-              <motion.p
-                className="font-redhat font-extrabold text-2xl md:text-4xl mt-12 md:mt-16 text-white"
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.9 }}
-              >
-                Think it, build it, live it
-              </motion.p>
-              <motion.p
-                className="font-sans text-md md:text-lg   text-white mt-6"
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 1.5 }}
-              >
-                Welcome to my portfolio! This is where my creativity meets code.
-                Explore my work, see my skills in action, and get to know my
-                journey. I am excited to share what I have built with you.
-              </motion.p>
-            </div>
-            <div className="w-40 md:w-1/3 mt-12 md:mt-0">
-              <img
-                src={priyanka}
-                alt="priyanka patel"
-                className="size-40 md:size-80  border-2 border-white rounded-full select-none"
-              />
-            </div>
-          </div>
-          <div className="w-full text-center md:text-left mt-10 md:mt-0">
+      <div className="h-screen w-full md:pt-24 pt-12 ">
+        <div className="h-full w-full  flex items-center justify-center relative">
+          <div className=" w-80 md:w-[60%]   h-full flex flex-col md:justify-center justify-end gap-6  pb-4 md:pb-0 md:z-0 z-10">
+            <motion.p
+              className="font-heading text-3xl md:text-7xl text-pink-600 "
+              initial={{ opacity: 0, y: -30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+            >
+              Hello,
+              <br /> I'm Priyanka Patel
+            </motion.p>
+            <motion.p
+              className="font-para  font-bold text-2xl md:text-4xl  text-white"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.9 }}
+            >
+              Think it, build it, live it
+            </motion.p>
+            <motion.p
+              className="font-para text-md md:text-lg md:w-5/6  text-gray-300 "
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1.5 }}
+            >
+              Welcome to my portfolio! This is where my creativity meets code.
+              Explore my work, see my skills in action, and get to know my
+              journey. I am excited to share what I have built with you.
+            </motion.p>
             <motion.button
-              className="mx-auto h-8 w-24 md:h-10 md:w-38 bg-yellow-400 rounded-sm font-redhat font-bold select-none"
-              onClick={() => {
-                openResume();
-              }}
+              className="h-8 w-28 md:h-10 md:w-32 text-pink-600 border-pink-600 border-2 rounded-md font-para font-extrabold select-none hover:bg-pink-600 hover:text-black"
+              onClick={openResume}
               whileTap={{ scale: 0.9 }}
               whileHover={{
-                scale: 1.05, // Scale the image on hover
-                rotate: -1, // Add rotation effect
-                transition: { duration: 0.1 }, // Smooth hover transition
+                scale: 1.04, // Scale the image on hover
+                transition: { duration: 0.4 }, // Smooth hover transition
               }}
             >
-              Resume
+              View Resume
             </motion.button>
           </div>
+          <img
+            src={priyanka2}
+            alt="priyanka patel"
+            className="h-full -scale-x-100  select-none opacity-60 absolute md:static"
+          />
         </div>
       </div>
     </>
