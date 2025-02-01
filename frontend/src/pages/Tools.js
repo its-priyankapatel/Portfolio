@@ -11,53 +11,74 @@ import VS_code from "../images/tools/VS-Code.svg";
 import bootstap from "../images/tools/Bootstrap.svg";
 
 const Tools = () => {
+  const tools = [
+    {
+      img: postman,
+      name: "Postman",
+    },
+    {
+      img: Git,
+      name: "Git",
+    },
+    {
+      img: mongoDB,
+      name: "MongoDB",
+    },
+    {
+      img: tailwindCSS,
+      name: "Tailwind CSS",
+    },
+    {
+      img: framer_motion,
+      name: "Framer Motion",
+    },
+    {
+      img: figma,
+      name: "Figma",
+    },
+    {
+      img: chatgpt,
+      name: "ChatGPT",
+    },
+    {
+      img: VS_code,
+      name: "VS Code",
+    },
+    {
+      img: bootstap,
+      name: "Bootstrap",
+    },
+  ];
   return (
     <>
-      <div className=" h-screen md:px-24 px-3 flex flex-col items-center justify-center gap-8  ">
-        <motion.div className=" text-center h-20 md:h-14 md:text-3xl text-lg font-redhat font-semibold text-yellow-400 mt-64 md:mt-0">
-          These are the tools that fuel my development journey
-        </motion.div>
-        {/* <div className="flex justify-center items-center"> */}
-        <div className=" md:h-1/2 md:w-5/6 h-[800px] w-60  md:grid md:grid-cols-3 md:pl-24 md:items-center md:gap-4 flex flex-col justify-center items-center gap-6">
-          <motion.div className="bg-white h-16 py-2 flex w-56 px-4  items-center gap-6 rounded-lg">
-            <img src={chatgpt} alt="ChatGPT" className="h-11" />
-            <p className="text-xl font-semibold font-redhat">ChatGPT</p>
-          </motion.div>
-          <motion.div className="bg-white h-16 py-2 flex w-56 px-4  items-center gap-6 rounded-lg">
-            <img src={Git} alt="Git" className="h-11" />
-            <p className="text-xl font-semibold font-redhat">Git</p>
-          </motion.div>
-          <motion.div className="bg-white h-16 py-2 flex w-56 px-4  items-center gap-6 rounded-lg">
-            <img src={framer_motion} alt="FramerMotion" className="h-11" />
-            <p className="text-xl font-semibold font-redhat">FrameMotion</p>
-          </motion.div>
-          <motion.div className="bg-white h-16 py-2 flex w-56 px-4  items-center gap-6 rounded-lg">
-            <img src={figma} alt="Figma" className="h-11" />
-            <p className="text-xl font-semibold font-redhat">Figma</p>
-          </motion.div>
-          <motion.div className="bg-white h-16 py-2 flex w-56 px-4  items-center gap-6 rounded-lg">
-            <img src={mongoDB} alt="MongoDB" className="h-11" />
-            <p className="text-xl font-semibold font-redhat">MongoDB</p>
-          </motion.div>
-          <motion.div className="bg-white h-16 py-2 flex w-56 px-4  items-center gap-6 rounded-lg">
-            <img src={postman} alt="Postman" className="h-11" />
-            <p className="text-xl font-semibold font-redhat">Postman</p>
-          </motion.div>
-          <motion.div className="bg-white h-16 py-2 flex w-56 px-4  items-center gap-4 rounded-lg">
-            <img src={tailwindCSS} alt="tailwindCSS" className="h-11" />
-            <p className="text-xl font-semibold font-redhat ">TailwindCSS</p>
-          </motion.div>
-          <motion.div className="bg-white h-16 py-2 flex w-56 px-4  items-center gap-6 rounded-lg">
-            <img src={VS_code} alt="VScode" className="h-11" />
-            <p className="text-xl font-semibold font-redhat">VSCode</p>
-          </motion.div>
-          <motion.div className="bg-white h-16 py-2 flex w-56 px-4  items-center gap-6 rounded-lg">
-            <img src={bootstap} alt="BootStrap" className="h-11" />
-            <p className="text-xl font-semibold font-redhat">BootStrap</p>
-          </motion.div>
+      <div className="h-screen w-full md:pt-24 pt-16">
+        <div className=" h-full w-full flex flex-col justify-center gap-6 px-4 md:pl-24 ">
+          <p className="font-3xl md:text-5xl font-heading  text-pink-600 pl-24 ">
+            My ToolKit
+          </p>
+          <div className=" h-3/4 w-3/5 grid grid-cols-3 gap-2 select-none pl-24">
+            {tools.map((tool, index) => (
+              <div
+                className="size-36 flex flex-col items-center justify-center gap-1 rounded-md border-[1px] border-zinc-900 "
+                key={index}
+              >
+                <motion.div className="size-24 rounded-full flex justify-center items-center bg-slate-700 bg-opacity-20 border-[1px] border-zinc-700">
+                  <motion.img
+                    src={tool.img}
+                    alt={tool.name}
+                    className="size-12"
+                    whileHover={{
+                      scale: 1.2,
+                      transition: { duration: 0.5 },
+                    }}
+                  />
+                </motion.div>
+                <p className="text-gray-300 text-sm font-para">{tool.name}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-      {/* </div> */}
     </>
   );
 };

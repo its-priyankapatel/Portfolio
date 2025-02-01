@@ -1,7 +1,6 @@
 import React from "react";
-import priyanka from "../images/pinku_yellow.jpg";
 import { motion } from "framer-motion";
-import priyanka2 from "../images/Priyanka.png";
+import priyanka from "../images/Priyanka_Patel.png";
 
 const Home = () => {
   const pdfURL = "/pdf/Priyanka_Patel_Resume.pdf";
@@ -13,7 +12,7 @@ const Home = () => {
     <>
       <div className="h-screen w-full md:pt-24 pt-12 ">
         <div className="h-full w-full  flex items-center justify-center relative">
-          <div className=" w-80 md:w-[60%]   h-full flex flex-col md:justify-center justify-end gap-6  pb-4 md:pb-0 md:z-0 z-10">
+          <div className="w-80 md:w-[60%]   h-full flex flex-col justify-center  gap-6  pb-4 md:pb-0 md:z-0 z-10">
             <motion.p
               className="font-heading text-3xl md:text-7xl text-pink-600 "
               initial={{ opacity: 0, y: -30 }}
@@ -54,9 +53,9 @@ const Home = () => {
             </motion.button>
           </div>
           <img
-            src={priyanka2}
+            src={priyanka}
             alt="priyanka patel"
-            className="h-full -scale-x-100  select-none opacity-60 absolute md:static"
+            className="md:h-4/5 h-3/5 -rotate-2 select-none md:opacity-60 opacity-15 absolute md:static"
           />
         </div>
       </div>
