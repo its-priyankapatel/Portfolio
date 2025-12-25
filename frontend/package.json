@@ -16,6 +16,7 @@
     "react-scripts": "5.0.1"
   },
   "scripts": {
+    "dev": "nodemon index.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -42,5 +43,8 @@
   "devDependencies": {
     "tailwindcss": "^3.4.17",
     "web-vitals": "^4.2.4"
+  },
+  "engines": {
+    "node": "22.12.0"
   }
 }

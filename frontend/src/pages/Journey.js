@@ -3,21 +3,28 @@ import navigation from "../images/navigation.png";
 import education from "../images/education_hat.png";
 import svvv_logo from "../images/svvv.png";
 import aknk_logo from "../images/School_logo.png";
+
 function Journey() {
   return (
     <>
       <div className="h-screen w-full md:pt-24 pt-16 ">
         <div className="h-full w-full flex justify-center">
-          <div className="h-full w-3/4 flex flex-col pl-14 gap-4">
-            <div className="flex mt-6 bg-black items-center gap-2">
+          <div className="h-full md:w-3/4 w-full flex flex-col md:pl-14 pl-0 gap-4 ">
+            <div className="flex pl-3 md:pl-0 mt-6 items-center gap-2">
               <img src={education} alt="Education_hat" className="size-14 " />
-              <h1 className="text-pink-600 font-heading text-5xl">EDUCATION</h1>
+              <h1 className="text-pink-600 font-heading text-3xl md:text-5xl">
+                EDUCATION
+              </h1>
             </div>
-            <div className="h-full w-full flex items-center border-l-2 border-gray-600 ml-4">
-              <div className=" h-9/10 w-3/4 flex flex-col gap-10 ml-10">
-                <div className="h-32 w-3/4 flex flex-col gap-1 shadow-sm shadow-slate-700">
-                  <div className="size-10 shadow-sm shadow-slate-700 rounded-full ml-2 mt-2 flex justify-center items-center">
-                    <img src={svvv_logo} alt="svvv-logo" className="size-8 " />
+            <div className="h-full w-full flex md:items-center items-start md:ml-4 border-l-2">
+              <div className=" h-9/10 md:w-3/4 w-full flex flex-col md:gap-10 gap-5 md:ml-10 ml-0">
+                <div className="md:h-32 md:w-3/4 w-full flex flex-col gap-1 shadow-sm shadow-slate-700">
+                  <div className="md:size-10 size-8 shadow-sm shadow-slate-700 rounded-full ml-2 mt-2 flex justify-center items-center">
+                    <img
+                      src={svvv_logo}
+                      alt="svvv-logo"
+                      className="md:size-8 size-6 "
+                    />
                   </div>
                   <p className="font-para font-semibold text-white ml-2 ">
                     Shri Vaishnav Vidyapeeth Vishwavidyalaya
@@ -25,7 +32,7 @@ function Journey() {
                       (2021-2025)
                     </span>
                   </p>
-                  <p className="text-white font-para text-sm ml-2 ">
+                  <p className="text-white font-para md:text-sm text-xs ml-2 ">
                     Bachelor's Degree, Computer Science and Engineering
                   </p>
                   <div className="flex items-center gap-1 ml-2 ">
@@ -35,9 +42,13 @@ function Journey() {
                     </p>
                   </div>
                 </div>
-                <div className=" h-32 w-3/4 flex flex-col gap-1 shadow-sm shadow-slate-700">
-                  <div className="size-10 shadow-sm shadow-slate-700 rounded-full ml-2 mt-2 flex justify-center items-center">
-                    <img src={aknk_logo} alt="School-logo" className="size-8" />
+                <div className=" h-32 md:w-3/4 w-full flex flex-col gap-1 shadow-sm shadow-slate-700">
+                  <div className="md:size-10 size-8 shadow-sm shadow-slate-700 rounded-full ml-2 mt-2 flex justify-center items-center">
+                    <img
+                      src={aknk_logo}
+                      alt="School-logo"
+                      className="md:size-8 size-6"
+                    />
                   </div>
                   <p className="font-para font-semibold text-white ml-2 ">
                     Arvind Kumar Nitin Kumar Higher Secondary School
@@ -45,7 +56,7 @@ function Journey() {
                       (2020-2018)
                     </span>
                   </p>
-                  <p className="text-white font-para text-sm ml-2 ">
+                  <p className="text-white font-para md:text-sm text-xs ml-2 ">
                     Secondary School, MPBSE
                   </p>
                   <div className="flex items-center gap-1 ml-2 ">
@@ -55,9 +66,13 @@ function Journey() {
                     </p>
                   </div>
                 </div>
-                <div className="shadow-sm shadow-slate-700 h-32 w-3/4 flex flex-col gap-1">
-                  <div className="size-10  shadow-sm shadow-slate-700 rounded-full ml-2 mt-2 flex justify-center items-center">
-                    <img src={aknk_logo} alt="School-logo" className="size-8" />
+                <div className="shadow-sm shadow-slate-700 h-32 md:w-3/4 w-full flex flex-col gap-1">
+                  <div className="md:size-10 size-8 shadow-sm shadow-slate-700 rounded-full ml-2 mt-2 flex justify-center items-center">
+                    <img
+                      src={aknk_logo}
+                      alt="School-logo"
+                      className="md:size-8 size-6"
+                    />
                   </div>
                   <p className="font-para font-semibold text-white ml-2 ">
                     Arvind Kumar Nitin Kumar Higher Secondary School
@@ -65,7 +80,7 @@ function Journey() {
                       (2018-2016)
                     </span>
                   </p>
-                  <p className="text-white font-para text-sm ml-2 ">
+                  <p className="text-white font-para md:text-sm text-xs ml-2 ">
                     High School, MPBSE
                   </p>
                   <div className="flex items-center gap-1 ml-2 ">
