@@ -102,7 +102,7 @@ const Tools = () => {
                 // style={{ rotate }}
                 className="size-24 rounded-full flex justify-center items-center
                 bg-slate-700/20 border border-pink-500
-                shadow-[0_0_8px_rgba(236,72,153,0.5)] hover:scale-90 transition-all duration-500"
+                shadow-[0_0_8px_rgba(236,72,153,0.6)] hover:scale-90 transition-all duration-500"
               >
                 <img
                   src={tool.img}
