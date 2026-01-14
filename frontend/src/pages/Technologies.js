@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 import c_programming from "../images/Technologies/c_programming.png";
 import cpp from "../images/Technologies/cpp.png";
-import html from "../images/Technologies/html.png";
+import htmlTechnology from "../images/Technologies/htmlTechnology.png";
 import css from "../images/Technologies/css-3.png";
 import javaScript from "../images/Technologies/js.png";
 import react from "../images/Technologies/react.png";
@@ -27,7 +27,7 @@ const Technologies = () => {
     { name: "C ", image: c_programming },
     { name: "C++", image: cpp },
     {name:  "Java", image: java},
-    { name: "HTML", image: html },
+    { name: "HTML", image: htmlTechnology },
     { name: "CSS", image: css },
     { name: "JavaScript", image: javaScript },
     { name: "ReactJS", image: react },
@@ -43,7 +43,7 @@ const Technologies = () => {
 
       <div className="flex jsutify-start xl:justify-center items-center">
         {/* <div className="grid grid-cols-2 xl:grid-cols-9 gap-10 xl:gap-16"> */}
-        <div className="w-full grid grid-cols-[repeat(auto-fit,minmax(120px,1fr))] gap-6 xl:gap-10">
+        <div className="w-full grid grid-cols-[repeat(auto-fit,minmax(120px,1fr))] gap-6 xl:gap-5">
           {technology.map((item, index) => (
             <motion.div
               key={index}
