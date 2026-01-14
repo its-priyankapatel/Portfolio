@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 
 const Contact = () => {
   const [message, setMessage] = useState("");
+  
 
   const CHAR_LIMIT = 300;
 
@@ -30,6 +31,7 @@ const Contact = () => {
 
       if (data.success) {
         alert("Email sent successfully");
+        
         setMessage(""); // reset textarea
       } else {
         alert("Error in sending email");
@@ -37,6 +39,10 @@ const Contact = () => {
     } catch (err) {
       console.error(err);
       alert("Error in sending email");
+    }
+    finally{
+      e.target.name="";
+       e.target.email="";
     }
   };
 
@@ -56,53 +62,6 @@ const Contact = () => {
             I’d love to hear from you.
           </p>
         </div>
-
-        {/* FORM */}
-        {/* <form
-          onSubmit={handleSubmit}
-          className="w-full flex flex-col gap-4 items-center bg-slate-300"
-        >
-          <div className="flex flex-col md:flex-row md:gap-10 gap-5">
-            <input
-              type="text"
-              name="name"
-              placeholder="Enter Full Name"
-              required
-              className="h-11 w-full rounded-lg pl-3 bg-slate-900 text-white outline-none"
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Enter Email"
-              required
-              className="h-11 w-full rounded-lg pl-3 bg-slate-900 text-white outline-none"
-            />
-          </div>
-
-          <textarea
-            name="message"
-            placeholder="Write your message here..."
-            required
-            value={message}
-            onChange={handleChange}
-            className="w-full md:h-32 h-28 rounded-xl px-3 pt-2 bg-slate-900 text-white resize-none outline-none"
-          />
-
-          <p className="text-xs text-gray-400 text-right w-[95%]">
-            {charCount}/{CHAR_LIMIT}
-          </p>
-
-          <motion.button
-            type="submit"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            disabled={charCount === 0}
-            className="border-2 border-pink-600 text-white bg-pink-600 h-10 w-32 rounded-3xl
-              hover:bg-pink-700 hover:border-pink-700 transition"
-          >
-            Send Message
-          </motion.button>
-        </form> */}
         <form
   onSubmit={handleSubmit}
   className="w-full max-w-4xl flex flex-col gap-4 items-center px-4 py-8"
