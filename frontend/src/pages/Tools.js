@@ -63,8 +63,8 @@ const Tools = () => {
   const rotate = useTransform(scrollYProgress, [0, 1], [0, 360]);
 
   return (
-    <section className="min-h-screen w-auto mt-10">
-      <div className="h-full w-3/5 flex flex-col justify-center gap-6">
+    <section className="h-auto w-auto mt-32 md:mt-48">
+      <div className="h-full w-full lg:w-4/5 xl:w-3/5 flex flex-col justify-center gap-6">
         {/* Heading */}
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
@@ -94,15 +94,15 @@ const Tools = () => {
                duration: 0.3,
                ease: "easeInOut",
               }}
-              className="size-36 flex flex-col items-center justify-center gap-3
+              className="size-32 sm:size-36 flex flex-col items-center justify-center gap-3
               rounded-xl border border-zinc-800 bg-black/30 backdrop-blur-md"
             >
               {/* Rotating Icon Container */}
               <motion.div
                 // style={{ rotate }}
-                className="size-24 rounded-full flex justify-center items-center
-                bg-slate-700/20 border border-pink-500
-                shadow-[0_0_8px_rgba(236,72,153,0.6)] hover:scale-90 transition-all duration-500"
+                className="size-20 sm:size-24 rounded-full flex justify-center items-center
+                bg-slate-700/20 border border-zinc-800
+                 hover:scale-90 transition-all duration-500"
               >
                 <img
                   src={tool.img}

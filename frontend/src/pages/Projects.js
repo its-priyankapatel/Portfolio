@@ -1,75 +1,98 @@
-import React, { useState,useRef } from "react";
-import tasto from "./../images/tasto.png";
-import { useScroll } from "framer-motion";
+import React from "react";
 import { motion } from "framer-motion";
+import tasto from "../images/videos/project-1.mp4";
 
 
 const Projects = () => {
-const ref = useRef(null);
-const { scrollYProgress } = useScroll({
-  target:ref,
-  offset:["start end","end start"],
-})
+  const projects = [
+    {
+      video: tasto,
+      name: "Food Delivery Application",
+      description:
+        "A full-stack MERN food delivery platform where users can browse restaurants, explore menus, place orders, and pay securely using Stripe. Includes order tracking and a fully responsive UI.",
+      link: "https://tasto.vercel.app/",
+    },
+    {
+      video: "https://res.cloudinary.com/driqu2cgm/video/upload/v1739728639/Campus_Link_b8kkla.3gp",
+      name: "University Social Networking Platform",
+      description:
+        "A centralized university social networking platform enabling seamless communication between students and faculty. Users can share notes, resolve doubts, receive academic updates, and stay informed about university events.",
+      link: "https://cl-campus-link.vercel.app",
+    },
+  ];
 
-  const project=[
-    {
-      image: tasto,
-      name:  "Food Delivery Application",
-      description:"A responsive web application that allows users to browse restaurants, explore menus, place food orders, and make secure online payments using the Stripe payment gateway. The platform includes features like order management, restaurant listings, and delivery status updates."
-    },
-    {
-      image:"",
-      name: "View Project",
-      description:"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident, molestiae officia. Reprehenderit cumque quis provident."
-    },
-    {
-      image:"",
-      name: "View Project",
-      description:"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident, molestiae officia. Reprehenderit cumque quis provident."
-    }
-  ]
   return (
-    <>
-      <div className="h-screen w-full md:pt-24 pt-16">
-        {/* <div className="h-full w-full flex flex-col items-center gap-3 bg-pink-200"> */}
-          <p className="text-5xl font-heading text-pink-600 text-center">Projects</p>
-          <div className="h-auto w-full flex justify-center mt-5">
-            <div className="h-[500px] w-[1100px] flex gap-12 justify-center items-center">
-            {
-             project.map((item,index)=>(
-            <div key={index} className="bg-white h-[450px] w-80 flex flex-col items-center gap-3 rounded-2xl">
-              <div className="h-48 w-72 mt-2 shadow-sm shadow-slate-200 rounded-lg">
-                <a href="https://tasto.vercel.app/" target="_blank" rel="noopener noreferer" className="block w-full h-full">
-                <img
-                    src={item.image}
-                    alt={item.name}
-                    className="w-full h-full object-cover rounded-lg"
+    <section className="w-full px-4 py-2">
+      <h1 className="text-4xl md:text-5xl font-heading text-pink-600 mb-12 text-center md:text-left">
+        Projects
+      </h1>
+
+      <div className="flex flex-col gap-32">
+        {projects.map((project, index) => {
+          const fromLeft = index % 2 === 0;
+
+          return (
+            <div
+              key={index}
+              className={`flex flex-col md:flex-row ${
+                !fromLeft ? "md:flex-row-reverse" : ""
+              } gap-14 items-start`}
+            >
+              {/* VIDEO */}
+              <motion.div
+                initial={{ opacity: 0, x: fromLeft ? -80 : 80 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                viewport={{ once: true, amount: 0.3 }}
+                className="w-full md:w-1/2"
+              >
+                <video
+                  src={project.video}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full rounded-xl border border-gray-200"
                 />
-                </a>
-              </div>
-              <div className="flex flex-col justify-center items-center gap-3">
-                <p className="text-xl font-heading text-pink-600 px-3">
-                  {item.name}
+              </motion.div>
+
+              {/* CONTENT */}
+              <motion.div
+                initial={{ opacity: 0, x: fromLeft ? 80 : -80 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{
+                  duration: 0.6,
+                  ease: "easeOut",
+                  delay: 0.1,
+                }}
+                viewport={{ once: true, amount: 0.3 }}
+                className="w-full md:w-1/2 flex flex-col items-start"
+              >
+                <h2 className="text-2xl md:text-3xl font-heading text-pink-600 mb-4">
+                  {project.name}
+                </h2>
+
+                <p className="text-gray-700 leading-relaxed max-w-xl mb-6">
+                  {project.description}
                 </p>
-                <motion.div  ref={ref} style={{ opacity: scrollYProgress }}  className="px-2 h-28 overflow-y-auto no-scrollbar text-black text-left mx-4">
-                  {item.description}
-                </motion.div>
-                <button
-                  onClick={() => window.open("https://tasto.vercel.app/")}
-                  className="rounded-md text-white bg-pink-600 hover:bg-pink-500 text-sm mt-4 px-4 py-2"
+
+                <motion.button
+                  onClick={() => window.open(project.link, "_blank")}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  // transition={{ type: "spring", stiffness: 250 }}
+                  className="bg-pink-600 hover:bg-pink-700 text-white px-6 py-2 rounded-full text-sm"
                 >
                   View Project
-                </button>
-              </div>
-               </div>
-              ))
-            }
-          </div>
-          </div>
-        {/* </div> */}
+                </motion.button>
+              </motion.div>
+            </div>
+          );
+        })}
       </div>
-    </>
+    </section>
   );
 };
 
 export default Projects;
+

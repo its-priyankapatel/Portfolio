@@ -6,7 +6,7 @@ import signature from "../images/signature.png";
 const Navbar = () => {
   return (
     <>
-      <nav className=" flex  md:items-center justify-between md:h-24 h-12  pt-2 bg-black sticky top-0 z-10">
+      <nav className=" flex  md:items-center justify-between md:h-24 h-12  pt-2 bg-black sticky top-0 z-[999]">
         <div>
           <motion.img
             className="h-10 md:h-14 select-none"

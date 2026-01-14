@@ -108,8 +108,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import navigation from "../images/navigation.png";
 import education from "../images/education_hat.png";
 import svvv_logo from "../images/svvv.png";
-// import ardent_logo from "../images/ardent.png";
-// import internship_logo from "../images/internship.png";
+import ardent_logo from "../images/ardent.png"
+import internship_logo from "../images/vyanwebs.jpg";
 
 function Journey() {
   const containerRef = useRef(null);
@@ -124,41 +124,41 @@ function Journey() {
 
   const journeyData = [
     {
-      title: "MERN Stack Intern",
-      org: "Ardent Technology",
-      year: "(2025)",
-      desc: "Worked on real-world MERN stack projects, REST APIs & UI.",
-      location: "Indore, India",
-      logo: svvv_logo,
-    },
-    {
       title: "MERN Stack Trainee",
-      org: "Ardent Technology",
-      year: "(2024)",
+      org: "Vyanwebs Technology Pvt. Ltd.",
+      year: "(Sept 2025 - Dec 2025)",
       desc: "Hands-on training in MongoDB, Express, React & Node.js.",
       location: "Indore, India",
-      logo: svvv_logo,
+      logo: internship_logo,
+    },
+    {
+      title: "MERN Stack Intern",
+      org: "Ardent Computech Pvt. Ltd.",
+      year: "(July 2024 - Aug 2024)",
+      desc: "Worked on real-world MERN stack projects, REST APIs & UI.",
+      location: "Indore, India",
+      logo: ardent_logo,
     },
     {
       title: "Bachelor of Technology (CSE)",
       org: "Shri Vaishnav Vidyapeeth Vishwavidyalaya",
-      year: "(2021 – 2025)",
+      year: "(July 2021 - June 2025)",
       desc: "Computer Science and Engineering.",
       location: "Indore, India",
       logo: svvv_logo,
-    },
+    }
   ];
 
   return (
-    <div ref={containerRef} className="min-h-screen w-full md:pt-24 pt-16">
+    <div ref={containerRef} className="min-h-screen w-full md:pt-32 pt-16">
       <div className="w-full flex justify-center">
-        <div className="md:w-4/5 w-full flex flex-col gap-8">
+        <div className="w-full flex flex-col gap-8">
 
           {/* Heading */}
-          <div className="flex items-center gap-3 pl-4 md:pl-0">
+          <div className="flex items-center gap-3">
             <img src={education} alt="Journey" className="size-14" />
             <h1 className="text-pink-600 font-heading text-3xl md:text-5xl">
-              JOURNEY
+              Journey
             </h1>
           </div>
 
@@ -190,7 +190,7 @@ function Journey() {
                   >
                     {/* Dot */}
                     <span className="absolute left-1/2 -translate-x-1/2 top-6 
-                                     h-4 w-4 bg-pink-600 rounded-full z-10" />
+                                     h-4 w-4 bg-pink-600 rounded-full z-2" />
 
                     {/* Card */}
                     <div

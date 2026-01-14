@@ -14,7 +14,7 @@ import Technologies from "./pages/Technologies";
 const App = () => {
   return (
     <>
-      <div className="md:px-24 px-2 min-h-screen h-auto bg-black  selection:bg-pink-600 selection:text-black ">
+      <div className="px-6 md:px-10 lg:px-24 min-h-screen h-auto bg-black  selection:bg-pink-600 selection:text-black ">
       <CustomCursor />
         <Navbar />
         {/* <div className="snap-page"> */}
@@ -24,11 +24,12 @@ const App = () => {
         <About />
         {/* </div> */}
         {/* <div className="snap-page"> */}
+        <Journey />
         <Tools />
         {/* </div> */}
         {/* <div className="snap-page"> */}
         <Technologies/>
-        <Journey />
+       
         {/* </div> */}
         {/* <div className="snap-page"> */}
         <Projects />

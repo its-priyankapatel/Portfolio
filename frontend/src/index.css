@@ -1,5 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@font-face {font-family: "heading"; src:url("./fonts/Mont-HeavyDEMO.otf")format("opentype")}
-@font-face {font-family: "para"; src:url("./fonts/Gontserrat-Light.ttf")format("truetype")}
+
+@font-face {
+    font-family: "heading";
+    src: url("./fonts/Mont-HeavyDEMO.otf")format("opentype")
+}
+
+@font-face {
+    font-family: "para";
+    src: url("./fonts/Gontserrat-Light.ttf")format("truetype")
+}
+
+
+/* Hide scrollbar but keep scroll functionality */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    /* IE & Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}

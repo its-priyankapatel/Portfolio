@@ -89,7 +89,7 @@ const About = () => {
         </motion.h1>
 
         {/* Paragraphs */}
-        <div className="md:h-80 flex flex-col gap-4 w-full md:w-3/4">
+        <div className="md:h-80 flex flex-col gap-4 w-full lg:w-3/4 mt-2 lg:mt-4">
           <motion.p
             className="font-para md:text-lg text-md text-white"
             variants={itemVariants}
