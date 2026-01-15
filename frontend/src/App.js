@@ -15,28 +15,15 @@ const App = () => {
   return (
     <>
       <div className="px-6 md:px-10 lg:px-24 min-h-screen h-auto bg-black  selection:bg-pink-600 selection:text-black ">
-      <CustomCursor />
+        <CustomCursor />
         <Navbar />
-        {/* <div className="snap-page"> */}
         <Home />
-        {/* </div> */}
-        {/* <div className="snap-page"> */}
         <About />
-        {/* </div> */}
-        {/* <div className="snap-page"> */}
         <Journey />
         <Tools />
-        {/* </div> */}
-        {/* <div className="snap-page"> */}
-        <Technologies/>
-       
-        {/* </div> */}
-        {/* <div className="snap-page"> */}
+        <Technologies />
         <Projects />
-        {/* </div> */}
-        {/* <div className="snap-page"> */}
         <Contact />
-        {/* </div> */}
         <Footer />
       </div>
     </>

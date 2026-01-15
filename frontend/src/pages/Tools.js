@@ -2,14 +2,11 @@ import React, { useRef } from "react";
 import {
   motion,
   useInView,
-  useScroll,
-  useTransform,
 } from "framer-motion";
 
 // Images
 import chatgpt from "../images/tools/ChatGPT.svg";
 import figma from "../images/tools/Figma.svg";
-import framer_motion from "../images/tools/Framer-Motion.svg";
 import Git from "../images/tools/Git.svg";
 import mongoDB from "../images/tools/MongoDB.svg";
 import postman from "../images/tools/Postman.svg";
@@ -58,9 +55,6 @@ const Tools = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  // Scroll rotation
-  const { scrollYProgress } = useScroll();
-  const rotate = useTransform(scrollYProgress, [0, 1], [0, 360]);
 
   return (
     <section className="h-auto w-auto mt-32 md:mt-48">
@@ -87,12 +81,12 @@ const Tools = () => {
             <motion.div
               key={index}
               variants={cardVariants}
-                whileHover={{
+              whileHover={{
                 borderRadius: "24px",
-               }}
-               transition={{
-               duration: 0.3,
-               ease: "easeInOut",
+              }}
+              transition={{
+                duration: 0.3,
+                ease: "easeInOut",
               }}
               className="size-32 sm:size-36 flex flex-col items-center justify-center gap-3
               rounded-xl border border-zinc-800 bg-black/30 backdrop-blur-md"

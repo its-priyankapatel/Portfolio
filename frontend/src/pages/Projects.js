@@ -1,12 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
-import tasto from "../images/videos/project-1.mp4";
 
 
 const Projects = () => {
   const projects = [
     {
-      video: tasto,
+      video: "https://res.cloudinary.com/driqu2cgm/video/upload/v1768499860/project-1_namk16.mp4",
       name: "Food Delivery Application",
       description:
         "A full-stack MERN food delivery platform where users can browse restaurants, explore menus, place orders, and pay securely using Stripe. Includes order tracking and a fully responsive UI.",
@@ -22,7 +21,7 @@ const Projects = () => {
   ];
 
   return (
-    <section className="w-full px-4 py-2">
+    <section className="w-full h-auto px-4 py-2 mt-32">
       <h1 className="text-4xl md:text-5xl font-heading text-pink-600 mb-12 text-center md:text-left">
         Projects
       </h1>
@@ -34,9 +33,8 @@ const Projects = () => {
           return (
             <div
               key={index}
-              className={`flex flex-col md:flex-row ${
-                !fromLeft ? "md:flex-row-reverse" : ""
-              } gap-14 items-start`}
+              className={`flex flex-col md:flex-row ${!fromLeft ? "md:flex-row-reverse" : ""
+                } gap-14 items-start`}
             >
               {/* VIDEO */}
               <motion.div

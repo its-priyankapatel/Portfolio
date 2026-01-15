@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Contact = () => {
   const [message, setMessage] = useState("");
-  
+
 
   const CHAR_LIMIT = 300;
 
@@ -31,7 +31,7 @@ const Contact = () => {
 
       if (data.success) {
         alert("Email sent successfully");
-        
+
         setMessage(""); // reset textarea
       } else {
         alert("Error in sending email");
@@ -40,16 +40,16 @@ const Contact = () => {
       console.error(err);
       alert("Error in sending email");
     }
-    finally{
-      e.target.name="";
-       e.target.email="";
+    finally {
+      e.target.name = "";
+      e.target.email = "";
     }
   };
 
   const charCount = message.length;
 
   return (
-    <div className="h-screen w-full pt-32 sm:pt-48">
+    <div className="h-auto w-full pt-32 sm:pt-48">
       <div className="h-full w-full flex flex-col items-center gap-6">
         {/* HEADER */}
         <div className="w-full max-w-4xl flex flex-col items-center px-2 gap-3">
@@ -63,50 +63,50 @@ const Contact = () => {
           </p>
         </div>
         <form
-  onSubmit={handleSubmit}
-  className="w-full max-w-4xl flex flex-col gap-4 items-center px-4 py-8"
->
-  <div className="flex flex-col md:flex-row gap-5 w-full">
-    <input
-      type="text"
-      name="name"
-      placeholder="Enter Full Name"
-      required
-      className="h-11 w-full md:w-1/2 rounded-lg pl-3 bg-slate-900 text-white outline-none"
-    />
-    <input
-      type="email"
-      name="email"
-      placeholder="Enter Email"
-      required
-      className="h-11 w-full md:w-1/2 rounded-lg pl-3 bg-slate-900 text-white outline-none"
-    />
-  </div>
+          onSubmit={handleSubmit}
+          className="w-full max-w-4xl flex flex-col gap-4 items-center px-4 py-8"
+        >
+          <div className="flex flex-col md:flex-row gap-5 w-full">
+            <input
+              type="text"
+              name="name"
+              placeholder="Enter Full Name"
+              required
+              className="h-11 w-full md:w-1/2 rounded-lg pl-3 bg-slate-900 text-white outline-none"
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter Email"
+              required
+              className="h-11 w-full md:w-1/2 rounded-lg pl-3 bg-slate-900 text-white outline-none"
+            />
+          </div>
 
-  <textarea
-    name="message"
-    placeholder="Write your message here..."
-    required
-    value={message}
-    onChange={handleChange}
-    className="w-full h-28 md:h-32 rounded-xl px-3 py-2 bg-slate-900 text-white overflow-y-auto no-scrollbar resize-none outline-none"
-  />
+          <textarea
+            name="message"
+            placeholder="Write your message here..."
+            required
+            value={message}
+            onChange={handleChange}
+            className="w-full h-28 md:h-32 rounded-xl px-3 py-2 bg-slate-900 text-white overflow-y-auto no-scrollbar resize-none outline-none"
+          />
 
-  <p className="text-xs text-gray-400 self-end">
-    {charCount}/{CHAR_LIMIT}
-  </p>
+          <p className="text-xs text-gray-400 self-end">
+            {charCount}/{CHAR_LIMIT}
+          </p>
 
-  <motion.button
-    type="submit"
-    whileHover={{ scale: 1.05 }}
-    whileTap={{ scale: 0.95 }}
-    disabled={charCount === 0}
-    className="border-2 border-pink-600 text-white bg-pink-600 h-10 w-32 md:h-11 md:w-40 rounded-3xl
+          <motion.button
+            type="submit"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            disabled={charCount === 0}
+            className="border-2 border-pink-600 text-white bg-pink-600 h-10 w-32 md:h-11 md:w-40 rounded-3xl
       hover:bg-pink-700 hover:border-pink-700 transition"
-  >
-    Send Message
-  </motion.button>
-</form>
+          >
+            Send Message
+          </motion.button>
+        </form>
 
       </div>
     </div>

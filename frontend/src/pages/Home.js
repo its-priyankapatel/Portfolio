@@ -22,7 +22,7 @@ const Home = () => {
   }, []);
 
   return (
-    <section className="h-screen w-full pt-5 z-0">
+    <section className="h-[90vh] w-full pt-5 z-0">
       <div className="h-full w-full flex flex-col-reverse sm:flex-row items-center justify-end sm:justify-center gap-5 relative">
 
         {/* TEXT SECTION */}

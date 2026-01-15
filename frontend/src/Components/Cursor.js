@@ -14,7 +14,7 @@ const CustomCursor = () => {
 
   return (
     <div
-      className="custom-cursor"
+      className="custom-cursor hidden md:block"
       style={{
         left: `${position.x}px`,
         top: `${position.y}px`,
